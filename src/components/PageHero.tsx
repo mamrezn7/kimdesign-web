@@ -15,7 +15,7 @@ export function PageHero({ lang, title, lede, picA, picB, altA, altB, crumb }: {
           {picA && (
             <div className="hero__pic-a load-in load-in--2"><Pic name={picA} alt={altA || ''} sizes="(max-width: 760px) 1px, 14vw" priority /></div>
           )}
-          <div className="hero__pic-b load-in load-in--3"><Pic name={picB} alt={altB} sizes="(max-width: 760px) 100vw, 30vw" priority /></div>
+          <div className="hero__pic-b"><Pic name={picB} alt={altB} sizes="(max-width: 760px) 100vw, 30vw" priority /></div>
           <div className="hero__text">
             <nav aria-label={lang === 'fa' ? 'مسیر صفحه' : 'Breadcrumb'}>
               <ol className="crumbs">

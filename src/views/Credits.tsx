@@ -23,10 +23,10 @@ export function Credits({ lang }: { lang: Lang }) {
       <section className="section" aria-label={c.h1[lang]}>
         <ul className="wrap" style={{ listStyle: 'none', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '48px 32px' }}>
           {(credits as Credit[]).map((cr) => (
-            <li key={cr.file} data-reveal="" style={{ display: 'grid', gap: 12, alignContent: 'start' }}>
-              <Pic name={cr.file} alt={cr.title} sizes="(max-width: 600px) 100vw, 25vw" />
+            <li key={cr.file} style={{ display: 'grid', gap: 12, alignContent: 'start' }}>
+              <div className="drift" style={{ overflow: 'hidden' }}><Pic name={cr.file} alt={cr.title} sizes="(max-width: 600px) 100vw, 25vw" /></div>
               <p dir="ltr" style={{ textAlign: 'start', fontSize: '0.95rem' }}>
-                “{cr.title}”{cr.creator ? ` by ${cr.creator}` : ''}{cr.license ? `, ${cr.license}` : ''}
+                “{cr.title}”{cr.creator && cr.creator !== 'null' ? ` by ${cr.creator}` : ''}{cr.license ? `, ${cr.license}` : ''}
               </p>
               <p style={{ fontSize: '0.95rem' }}>
                 {cr.page && <a href={cr.page} rel="noopener" target="_blank">{c.source[lang]}</a>}

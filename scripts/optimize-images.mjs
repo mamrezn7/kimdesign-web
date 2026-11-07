@@ -46,7 +46,7 @@ const list = (Array.isArray(credits) ? credits : credits.items || Object.values(
   .filter((c) => c && (c.file || c.name))
   .map((c) => ({
     file: parse(c.file || c.name).name,
-    title: c.title, creator: c.creator, license: c.licenseLabel || c.license, licenseUrl: c.licenseUrl, page: c.page, credit: c.credit,
+    title: c.title, creator: c.creator || undefined, license: c.licenseLabel || c.license, licenseUrl: c.licenseUrl, page: c.page, credit: c.credit,
   }))
   .filter((c) => manifest[c.file]);
 writeFileSync('src/content/credits.generated.json', JSON.stringify(list, null, 1));

@@ -78,7 +78,7 @@ export function Home({ lang }: { lang: Lang }) {
             <div className="hero__pic-a load-in load-in--2">
               <Pic name="oak-stair" alt={lang === 'fa' ? 'پلهٔ چوبی روشن' : 'A light timber stair'} sizes="(max-width: 760px) 1px, 14vw" priority />
             </div>
-            <div className="hero__pic-b load-in load-in--3">
+            <div className="hero__pic-b">
               <Pic name="bath-green" alt={lang === 'fa' ? 'حمامی با کاشی سبز تیره و آینهٔ گرد' : 'A bathroom in dark green tile with a round mirror'} sizes="(max-width: 760px) 100vw, 28vw" priority />
             </div>
             <div className="hero__text">
