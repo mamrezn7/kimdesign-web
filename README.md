@@ -93,5 +93,9 @@ Best Practices 100, Performance 83–95.
 The layout and interaction follow a boutique-hotel reference site: a framed first screen with
 two offset pictures, a sticky bar (menu box, centred mark, framed action) that slides in after
 the first screen, a four-column menu overlay, statement paragraphs, headings that mix thin and
-heavy words, and ornamental bands between chapters. Here the bands are drawn from Persian
+heavy words, and ornamental bands between chapters.
+
+Type: Persian pages use **Estedad** (hairline titles, heavy accent words, running text) and
+**Parastoo** (statements, wordmark, large menu words), both self-hosted from `public/fonts`
+under the SIL Open Font License. English pages use Cormorant Garamond and Karla. Here the bands are drawn from Persian
 *hazarbaf* brick bonds, in the palette's own fired-brick brown, kashi blue and gold.

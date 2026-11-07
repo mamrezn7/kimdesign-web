@@ -1,11 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
-import { Markazi_Text, Vazirmatn } from 'next/font/google';
-
-const body = Vazirmatn({ subsets: ['arabic', 'latin'], variable: '--font-vazirmatn', display: 'swap' });
-const accent = Markazi_Text({ subsets: ['arabic', 'latin'], variable: '--font-markazi', display: 'swap' });
-const fontClass = `${body.variable} ${accent.variable}`;
 import '../globals.css';
+import './fonts.css';
 
 export const metadata: Metadata = {
   applicationName: 'کیم دیزاین',
@@ -28,9 +24,13 @@ const boot = `(function(){var d=document.documentElement;d.classList.add('js');t
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="fa" dir="rtl" className={fontClass} suppressHydrationWarning>
+    <html lang="fa" dir="rtl" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: boot }} />
+        {/* the three files the first screen needs: hairline title, running text, the wordmark */}
+        <link rel="preload" href="/fonts/estedad-arabic-100.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/estedad-arabic-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/parastoo-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body>{children}</body>
     </html>
